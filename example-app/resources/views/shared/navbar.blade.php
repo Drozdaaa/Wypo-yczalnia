@@ -7,14 +7,12 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Start</a>
+            <a class="nav-link active" aria-current="page" href="#">Oferty</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#Wycieczki">Maszyny</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#Cennik">Cenniki</a>
-          </li>
+
           <li class="nav-item">
             <a class="nav-link" href="#Onas">O nas</a>
           </li>

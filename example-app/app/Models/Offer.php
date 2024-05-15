@@ -12,7 +12,9 @@ class Offer extends Model
 
     protected $fillable = ['name','price','description','engine','macihne_id'];
     public $timestamps = false;
+
     public function machines(): HasMany{
         return $this->hasMany(Machine::class);
     }
+    
 }

@@ -110,79 +110,21 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
-        <br><br><br>
-        <div class="container text-center">
-          <div class="row row-cols-2">
-            <div class="col"><div class="card mb-3" style="max-width: 39rem">
-              <div class="row g-0">
-                <div class="col-md-4">
-                  <img src="..." class="img-fluid rounded-start" alt="...">
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p class="card-text">Cena</p>
-                    <div class="d-grid gap-2 col-6 mx-auto">
+        <br><br><br><br><br><br>
+    <div class="table-responsive-sm">
+        <table class="table table-hover table-striped">
+          <thead>
+              <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Marka</th>
+                  <th scope="col">Model</th>
+                  <th scope="col">Rodzaj</th>
+                  <th scope="col">Rok produkcji</th>
+                  <th scope="col">Stan techniczny</th>
+                  <th scope="col">Dostępność</th>
 
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div></div>
-            <div class="col"><div class="card mb-3" style="max-width: 39rem;">
-              <div class="row g-0">
-                <div class="col-md-4">
-                  <img src="..." class="img-fluid rounded-start" alt="...">
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p class="card-text">Cena</p>
-                    <div class="d-grid gap-2 col-6 mx-auto">
-                      
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div></div>
-            <div class="col"><div class="card mb-3" style="max-width: 39rem">
-              <div class="row g-0">
-                <div class="col-md-4">
-                  <img src="..." class="img-fluid rounded-start" alt="...">
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p class="card-text">Cena</p>
-                    <div class="d-grid gap-2 col-6 mx-auto">
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-            <div class="col">
-              <div class="card mb-3" style="max-width: 39rem">
-              <div class="row g-0">
-                <div class="col-md-4">
-                  <img src="..." class="img-fluid rounded-start" alt="...">
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p class="card-text">Cena</p>
-                    <div class="d-grid gap-2 col-6 mx-auto">
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-             </div>
-            </div>
-          </div>
-        </div>
+              </tr>
+          </thead>
+          
+      </table>
+      </div>
