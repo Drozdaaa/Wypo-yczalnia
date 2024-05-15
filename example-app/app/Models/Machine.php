@@ -11,6 +11,6 @@ class Machine extends Model
     protected $fillable = ['brand','model','type','production_year','technical_condition','availability'];
 
     public $timestamps = false;
-
+    
 
 }

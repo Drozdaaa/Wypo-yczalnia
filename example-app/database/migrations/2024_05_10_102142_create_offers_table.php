@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Machine;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -17,7 +18,7 @@ return new class extends Migration
             $table->decimal('price');
             $table->text('description');
             $table->string('engine',30);
-
+            $table->foreignIdFor(Machine::class)->constrained();
         });
     }
 
