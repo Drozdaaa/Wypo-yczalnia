@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('type',50);
             $table->integer('production_year');
             $table->string('technical_condition',50);
-            $table->boolean('availability');
+            $table->string('availability');
         });
     }
 

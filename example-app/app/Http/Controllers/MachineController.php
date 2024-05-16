@@ -2,10 +2,23 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Machine;
 use Illuminate\Http\Request;
 
 class MachineController extends Controller
 {
-    //Display a listing of the resource.
+    public function index(){
+        return view('machines.index',[
+            'machines'=>Machine::all()
+        ]);
+    }
+    public function edit($id)
+    {
+        $machine = Machine::findOrFail($id);
+        return view('machine.edit', [
+            'mechine' => $machine,
+            'countries' => Machine::all()
+        ]);
+    }
 
 }
