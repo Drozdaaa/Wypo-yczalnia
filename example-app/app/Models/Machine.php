@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class Machine extends Model
 {
     use HasFactory;
-    public $timestamps = true;
+    public $timestamps = false;
     protected $attributes = [
             'period' => 6,
     ];

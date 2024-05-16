@@ -136,7 +136,7 @@
                     <td>{{$machine->production_year}} rok</td>
                     <td>{{$machine->technical_condition}}</td>
                     <td>{{$machine->availability}}</td>
-
+                    <td><a href="{{route('machines.edit', $machine->id)}}">Edycja</a></td>
                 </tr>
             @empty
                 <tr>

@@ -19,4 +19,5 @@ Route::controller(MachineController::class)->group(function () {
     Route::get('/machines', 'index')->name('machines.index');
     /*Route::get('/offres/{id}', 'show')->name('offers.show');*/
     Route::get('/machines/{id}/edit', 'edit')->name('machines.edit');
+    Route::put('/machines/{id}', 'update')->name('machines.update');
 });
