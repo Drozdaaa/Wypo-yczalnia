@@ -38,9 +38,9 @@
                         class="form-control @if ($errors->first('type')) is-invalid @endif"  value="{{ $machine->type }}">
                         <div class="invalid-feedback">Nieprawidłowy typ!</div>
                     </div>
-                    
+
                     <div class="form-group mb-3">
-                        <label for="production_year" class="form-label">Rok pordukcji</label>
+                        <label for="production_year" class="form-label">Rok produkcji</label>
                         <div class="input-group mb-3">
                             <input id="production_year" type="number" name="production_year" min="0" placeholder="0"
                                 step="any" class="form-control @if ($errors->first('production_year')) is-invalid @endif" value="{{ $machine->production_year }}">

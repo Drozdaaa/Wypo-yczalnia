@@ -20,7 +20,7 @@
                     <div class="card-body">
                       <h5 class="card-title">Card title</h5>
                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Sprawdź oferty</a>
+                      <a href="{{route('offers.show', ['id' => $offers[1]->id])}}" class="btn btn-primary">Więcej szczegółów...</a>
                     </div>
                   </div>
                 </div>
@@ -30,7 +30,7 @@
                     <div class="card-body">
                       <h5 class="card-title">Card title</h5>
                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Sprawdź ofertę</a>
+
                     </div>
                   </div>
                 </div>
@@ -50,7 +50,7 @@
                     <div class="card-body">
                       <h5 class="card-title">Card title</h5>
                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Sprawdź ofertę</a>
+
                     </div>
                   </div>
                 </div>
@@ -60,7 +60,7 @@
                     <div class="card-body">
                       <h5 class="card-title">Card title</h5>
                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Sprawdź ofertę</a>
+
                     </div>
                   </div>
                 </div>
@@ -80,7 +80,7 @@
                     <div class="card-body">
                       <h5 class="card-title">Card title</h5>
                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Sprawdź ofertę</a>
+
                     </div>
                   </div>
                 </div>
@@ -90,7 +90,7 @@
                     <div class="card-body">
                       <h5 class="card-title">Card title</h5>
                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Sprawdź ofertę</a>
+
                     </div>
                   </div>
                 </div>
@@ -110,21 +110,8 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
-        <br><br><br><br><br><br>
-    <div class="table-responsive-sm">
-        <table class="table table-hover table-striped">
-          <thead>
-              <tr>
-                  <th scope="col">#</th>
-                  <th scope="col">Marka</th>
-                  <th scope="col">Model</th>
-                  <th scope="col">Rodzaj</th>
-                  <th scope="col">Rok produkcji</th>
-                  <th scope="col">Stan techniczny</th>
-                  <th scope="col">Dostępność</th>
 
-              </tr>
-          </thead>
+        <div class="row">
 
-      </table>
-      </div>
+            </div>
+        </div>

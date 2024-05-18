@@ -9,15 +9,20 @@ class OfferController extends Controller
 {
     public function index()
     {
-
-        return view('Offers.index');
+        $offers = Offer::with('machine:id')->get();
+        return view('Offers.index',[
+            'offers'=>$offers,
+        ]);
     }
-    /*
+
     public function show($id)
     {
-        $offer = Offer::findOrFail($id);
-        return view('offers.show',['offer'=>$offer]);
+        $offer = OFfer::findOrFail($id);
+        return view('offers.show', [
+            'offer' => $offer,
+
+        ]);
     }
-    */
+
 }
 

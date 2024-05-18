@@ -12,7 +12,7 @@ Route::get('/', function () {
 
 Route::controller(OfferController::class)->group(function () {
     Route::get('/offers', 'index')->name('offers.index');
-    /*Route::get('/offres/{id}', 'show')->name('offers.show');*/
+    Route::get('/offers/{id}', 'show')->name('offers.show');
 });
 
 Route::controller(MachineController::class)->group(function () {

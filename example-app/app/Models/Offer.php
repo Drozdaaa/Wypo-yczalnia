@@ -4,17 +4,17 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Offer extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name','price','description','engine','macihne_id'];
+    protected $fillable = ['name','price','description','engine','machine_id'];
     public $timestamps = false;
 
-    public function machines(): HasMany{
-        return $this->hasMany(Machine::class);
+    public function machine(): BelongsTo{
+        return $this->belongsTo(Machine::class);
     }
-    
+
 }
