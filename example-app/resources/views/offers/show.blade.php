@@ -17,6 +17,9 @@
                         <p class="card-text">{{ $offer->description }}</p>
                     </div>
                     <div class="card-footer text-center">
+                        Silnik: {{$offer->engine}}
+                </div>
+                    <div class="card-footer text-center">
                             {{$offer->price}} PLN
                     </div>
                 </div>

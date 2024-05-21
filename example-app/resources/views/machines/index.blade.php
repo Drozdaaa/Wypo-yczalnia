@@ -90,7 +90,7 @@
                     <div class="card-body">
                       <h5 class="card-title">Card title</h5>
                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      
+
                     </div>
                   </div>
                 </div>
@@ -136,7 +136,9 @@
                     <td>{{$machine->production_year}} rok</td>
                     <td>{{$machine->technical_condition}}</td>
                     <td>{{$machine->availability}}</td>
-                    <td><a href="{{route('machines.edit', $machine->id)}}">Edycja</a></td>
+                    @can('is-admin')
+                        <td><a href="{{route('machines.edit', $machine->id)}}">Edycja</a></td>
+                    @endcan
                 </tr>
             @empty
                 <tr>

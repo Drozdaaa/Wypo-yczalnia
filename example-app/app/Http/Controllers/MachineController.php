@@ -37,4 +37,5 @@ class MachineController extends Controller
         $machine->update($input);
         return redirect()->route('machines.index');
     }
+    
 }

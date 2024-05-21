@@ -17,5 +17,17 @@
                 </li>
             </ul>
         </div>
+        <ul id="navbar-user" class="navbar-nav mb-2 mb-lg-0">
+            @if (Auth::check())
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('logout') }}">{{ Auth::user()->name }}, wyloguj się... </a>
+                </li>
+            @else
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('login') }}">Zaloguj się...</a>
+                </li>
+            @endif
+        </ul>
     </div>
+
 </nav>
