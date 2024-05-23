@@ -13,8 +13,6 @@
             <h1>Edytuj dane oferty</h1>
         </div>
 
-
-
         <div class="row d-flex justify-content-center">
             <div class="col-6">
                 <form method="POST" action="{{ route('offers.update', $offer->id) }}" class="needs-validation" novalidate>
@@ -41,15 +39,21 @@
 
                     <div class="form-group mb-3">
                         <label for="engine" class="form-label">Typ silnika</label>
-                        <div class="input-group mb-3">
-                            <input id="engine" type="text" name="engine" min="0" placeholder="0"
-                                step="any" class="form-control @if ($errors->first('engine')) is-invalid @endif" value="{{ $offer->engine }}">
-                        </div>
-                        <div class="invalid-feedback">Nieprawidłowy rok!</div>
+                        <select id="engine" name="engine" class="form-select @if ($errors->first('engine')) is-invalid @endif">
+                            <option value="Diesel">Diesel</option>
+                            <option value="Benzyna">Benzyna</option>
+                            <option value="Elektryczny">Elektryczny</option>
+                        </select>
+                        <div class="invalid-feedback">Nieprawidłowy silnik!</div>
                     </div>
                     <div class="text-center mt-4 mb-4">
                         <input class="btn btn-success" type="submit" value="Wyślij">
                     </div>
+                </form>
+                <form method="POST" action="{{ route('offers.destroy', $offer->id) }}">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="btn btn-danger">Usuń</button>
                 </form>
             </div>
         </div>

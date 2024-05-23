@@ -1,51 +1,49 @@
 @include('shared.html')
 
-@include('shared.head', ['pageTitle' => 'Edytuj Maszyny'])
+@include('shared.head', ['pageTitle' => 'Dodaj nową maszynę'])
 
 <body>
     @include('shared.navbar')
 
     <div class="container mt-5 mb-5">
 
-
+        @include('shared.session-error')
 
         <div class="row mt-4 mb-4 text-center">
-            <h1>Edytuj dane maszyn</h1>
+            <h1>Dodaj nową Maszynę</h1>
         </div>
 
-
+        @include('shared.validation-error')
 
         <div class="row d-flex justify-content-center">
             <div class="col-6">
-                <form method="POST" action="{{ route('machines.update', $machine->id) }}" class="needs-validation" novalidate>
+                <form method="POST" action="{{ route('machine.store') }}" class="needs-validation" novalidate>
                     @csrf
-                    @method('PUT')
                     <div class="form-group mb-2">
-                        <label for="brand" class="form-label">Nazwa</label>
-                        <input id="brand" name="brand" type="text"
-                        class="form-control @if ($errors->first('brand')) is-invalid @endif" value="{{ $machine->brand }}">
-                        <div class="invalid-feedback">Nieprawidłowe nazwa!</div>
+                        <label for="brand" class="form-label">Marka</label>
+                            <input id="brand" name="brand" type="text" class="form-control @if ($errors->first('brand')) is-invalid @endif" value="{{ old('brand') }}">
+                        <div class="invalid-feedback">Nieprawidłowa marka!</div>
                     </div>
                     <div class="form-group mb-2">
                         <label for="model" class="form-label">Model</label>
-                        <input id="model" name="model" type="text"
-                        class="form-control @if ($errors->first('model')) is-invalid @endif"  value="{{ $machine->model }}">
-                        <div class="invalid-feedback">Nieprawidłowy Model!</div>
+                        <div class="input-group mb-2">
+                            <input id="model" type="text" name="model" class="form-control @if ($errors->first('model')) is-invalid @endif" value="{{ old('model') }}">
+                        </div>
+                        <div class="invalid-feedback">Nieprawidłowy model!</div>
                     </div>
                     <div class="form-group mb-2">
                         <label for="type" class="form-label">Typ</label>
-                        <input id="type" name="type" type="text"
-                        class="form-control @if ($errors->first('type')) is-invalid @endif"  value="{{ $machine->type }}">
+                        <input id="type" name="type" type="text" class="form-control @if ($errors->first('type')) is-invalid @endif" value="{{ old('type') }}">
                         <div class="invalid-feedback">Nieprawidłowy typ!</div>
                     </div>
-
-                    <div class="form-group mb-3">
-                        <label for="production_year" class="form-label">Rok produkcji</label>
-                        <div class="input-group mb-3">
+                    <div class="form-group mb-2">
+                        <label for="production_year" class="form-label">Rok produkcji</textarea></label>
+                        <div class="input-group mb-2">
                             <input id="production_year" type="number" name="production_year" min="1980" placeholder="0"
-                                step="any" class="form-control @if ($errors->first('production_year')) is-invalid @endif" value="{{ $machine->production_year }}">
+                                step="any" class="form-control @if ($errors->first('production_year')) is-invalid @endif" value="{{ old('production_year') }}">
+
                         </div>
-                        <div class="invalid-feedback">Nieprawidłowy rok!</div>
+                        <div class="invalid-feedback">Nieprawidłowy rok produckji!</div>
                     </div>
                     <div class="form-group mb-2">
                         <label for="technical_condition" class="form-label">Stan techniczny</label>
@@ -65,16 +63,9 @@
                         </select>
                         <div class="invalid-feedback">Nieprawidłowa dostępność!</div>
                     </div>
-
                     <div class="text-center mt-4 mb-4">
                         <input class="btn btn-success" type="submit" value="Wyślij">
                     </div>
-
-                </form>
-                <form method="POST" action="{{ route('machines.destroy', $machine->id) }}">
-                    @csrf
-                    @method('DELETE')
-                    <button type="submit" class="btn btn-danger">Usuń</button>
                 </form>
             </div>
         </div>

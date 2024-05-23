@@ -9,9 +9,7 @@ class Machine extends Model
 {
     use HasFactory;
     public $timestamps = false;
-    protected $attributes = [
-            'period' => 6,
-    ];
+    
     protected $fillable = ['brand','model','type','production_year','technical_condition','availability'];
 
 

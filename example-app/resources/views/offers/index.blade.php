@@ -1,8 +1,19 @@
+zrobić przycisk edytuj oferty który przenosi na stronę z tabelą ofert
 <!doctype html>
 <html lang="pl" data-bs-theme="">
-    @include('shared.head',['pageTitle'=>'Wypożyczalnia'])
+    @include('shared.head',['pageTitle'=>'Oferty'])
 <body>
     @include('shared.navbar')
+    <div class="row mt-4 mb-4 text-center">
+        <h1>Nasze oferty</h1>
+    </div>
+
+        @can('is-admin')
+        <div class="row mb-2">
+            <a href="{{ route('offers.table') }}" >edytuj oferty</a>
+        </div>
+        @endcan
+
     <div class="container mt-5">
         <div class="row">
             @forelse ($offers as $offer)
@@ -11,12 +22,9 @@
 
                         <div class="card-body">
                             <h5 class="card-title">{{ $offer->name }}</h5>
-                            <p class="card-text">{{ $offer->description }}</p>
+
                             <a href="{{route('offers.show', ['id' => $offer->id])}}" class="btn btn-primary">Więcej szczegółów...</a>
                             <br><br>
-                            @can('is-admin')
-                                <a href="{{ route('offers.edit', $offer->id) }}" class="btn btn-primary mb-2">Edycja</a>
-                            @endcan
                         </div>
                     </div>
                 </div>

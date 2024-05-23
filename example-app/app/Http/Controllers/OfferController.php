@@ -1,10 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Http\Requests\StoreOfferRequest;
+use App\Models\Machine;
 use App\Models\Offer;
 use Illuminate\Http\Request;
-
 class OfferController extends Controller
 {
     public function index()
@@ -33,7 +33,7 @@ class OfferController extends Controller
     public function destroy(Offer $offer)
     {
         $offer->delete();
-        return redirect()->route('offers.index');
+        return redirect()->route('offers.table');
     }
     public function update(Request $request, $id)
     {
@@ -42,13 +42,35 @@ class OfferController extends Controller
             'price' => 'required|numeric|min:0',
             'description' => 'required|string',
             'engine' => 'required|string',
-
+            //'machine_id'=> 'required|integer|exists:machines,id',
         ]);
 
-        $offer = offer::findOrFail($id);
+        $offer = Offer::findOrFail($id);
         $input = $request->all();
         $offer->update($input);
-        return redirect()->route('offers.index');
+        return redirect()->route('offers.table');
     }
+    public function create()
+    {
+        return view('offers.create',[
+            'machines' => Machine::all()
+        ]);
+    }
+    public function table()
+    {
+        return view('offers.table',[
+            'offers'=>Offer::all()
+        ]);
+    }
+
+    public function store(StoreOfferRequest $request)
+    {
+        $input = $request->all();
+        Offer::create($input);
+
+        return redirect()->route('offers.index'
+    );
+    }
+
 }
 

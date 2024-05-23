@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Http\Requests\StoreMachineRequest;
 use App\Models\Machine;
 use Illuminate\Http\Request;
 
@@ -37,5 +37,25 @@ class MachineController extends Controller
         $machine->update($input);
         return redirect()->route('machines.index');
     }
-    
+    public function create()
+    {
+
+        return view('machines.create',[
+            'machines' => Machine::all()
+        ]);
+    }
+    public function store(StoreMachineRequest $request)
+    {
+        $input = $request->all();
+        Machine::create($input);
+
+        return redirect()->route('machines.index'
+
+    );
+    }
+    public function destroy(Machine $machine)
+    {
+        $machine->delete();
+        return redirect()->route('machines.index');
+    }
 }

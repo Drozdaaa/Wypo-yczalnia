@@ -1,6 +1,6 @@
 @include('shared.html')
 
-  @include('shared.head', ['pageTitle' => 'Wycieczka '.$offer->name])
+  @include('shared.head', ['pageTitle' => 'Oferta '.$offer->name])
   <body>
     @include('shared.navbar')
 
