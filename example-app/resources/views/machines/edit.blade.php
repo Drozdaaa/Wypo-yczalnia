@@ -74,7 +74,9 @@
                 <form method="POST" action="{{ route('machines.destroy', $machine->id) }}">
                     @csrf
                     @method('DELETE')
-                    <button type="submit" class="btn btn-danger">Usuń</button>
+                    <div class="text-center mt-4 mb-4">
+                        <button type="submit" class="btn btn-danger">Usuń</button>
+                    </div>
                 </form>
             </div>
         </div>

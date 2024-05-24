@@ -48,13 +48,11 @@
                         <div class="invalid-feedback">Nieprawidłowy Typ silnika!</div>
                     </div>
                     <div class="form-group mb-2">
-                        <label for="machine_id" class="form-label">Machine</label>
+                        <label for="machine_id" class="form-label">Rodzaj maszyny</label>
                         <select id="machine_id" name="machine_id" class="form-select @if ($errors->first('machine_id')) is-invalid @endif">
-                            <option value="1">Koparka</option>
-                            <option value="2">Betoniarka</option>
-                            <option value="3">Ładowarka</option>
-                            
-
+                            @foreach($machines as $machine)
+                                <option value="{{$machine->id}}">{{$machine->id}}.{{$machine->type}}</option>
+                            @endforeach
                         </select>
                         <div class="invalid-feedback">Nieprawidłowa maszyna!</div>
                     </div>

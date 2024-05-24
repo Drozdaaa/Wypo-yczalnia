@@ -42,7 +42,6 @@ class OfferController extends Controller
             'price' => 'required|numeric|min:0',
             'description' => 'required|string',
             'engine' => 'required|string',
-            //'machine_id'=> 'required|integer|exists:machines,id',
         ]);
 
         $offer = Offer::findOrFail($id);
@@ -53,7 +52,7 @@ class OfferController extends Controller
     public function create()
     {
         return view('offers.create',[
-            'machines' => Machine::all()
+            'machines' => Machine::all(),
         ]);
     }
     public function table()

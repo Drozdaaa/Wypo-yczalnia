@@ -33,7 +33,13 @@
                     </div>
                     <div class="form-group mb-2">
                         <label for="type" class="form-label">Typ</label>
-                        <input id="type" name="type" type="text" class="form-control @if ($errors->first('type')) is-invalid @endif" value="{{ old('type') }}">
+                        <select id="type" name="type" type="text" class="form-select @if ($errors->first('type')) is-invalid @endif" value="{{ old('type') }}">
+                            <option value="Betoniarka">Betoniarka</option>
+                            <option value="Buldożer">Buldożer</option>
+                            <option value="Koparka">Koparka</option>
+                            <option value="Koparko-ładowarka">Koparko-ładowarka</option>
+                            <option value="Żuraw">Żuraw</option>
+                        </select>
                         <div class="invalid-feedback">Nieprawidłowy typ!</div>
                     </div>
                     <div class="form-group mb-2">

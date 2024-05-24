@@ -10,12 +10,12 @@ Route::get('/', function () {
 });
 
 Route::controller(OfferController::class)->group(function () {
+    Route::get('/offers/create', 'create')->name('offers.create')->middleware('auth');
     Route::get('/offers', 'index')->name('offers.index');
     Route::get('/offers/{id}', 'show')->name('offers.show');
     Route::delete('/offers/{offer}', 'destroy')->name('offers.destroy');
     Route::get('/offers/{id}/edit', 'edit')->name('offers.edit')->middleware('auth');
     Route::put('/offers/{id}', 'update')->name('offers.update');
-    Route::get('/offers_create', 'create')->name('offers.create')->middleware('auth');
     Route::get('/table', 'table')->name('offers.table')->middleware('auth');
     Route::post('/offers', 'store')->name('offer.store');
 
@@ -24,7 +24,7 @@ Route::controller(OfferController::class)->group(function () {
 
 Route::controller(MachineController::class)->group(function () {
     Route::get('/machines', 'index')->name('machines.index');
-    Route::get('/machines_create', 'create')->name('machines.create')->middleware('auth');
+    Route::get('/machines/create', 'create')->name('machines.create')->middleware('auth');
     Route::get('/machines/{id}/edit', 'edit')->name('machines.edit')->middleware('auth');
     Route::put('/machines/{id}', 'update')->name('machines.update');
     Route::post('/machines', 'store')->name('machine.store');

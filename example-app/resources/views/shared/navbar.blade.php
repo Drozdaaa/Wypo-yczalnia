@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Wypożyczalnia maszyn</a>
+        <a class="navbar-brand">Wypożyczalnia maszyn</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -12,9 +12,7 @@
                 <li class="nav-item">
                     <a class="nav-link @if (str_contains(request()->path(), 'machines')) active @endif" href="{{ route('machines.index') }}">Maszyny</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#Onas">O nas</a>
-                </li>
+
             </ul>
         </div>
         <ul id="navbar-user" class="navbar-nav mb-2 mb-lg-0">
